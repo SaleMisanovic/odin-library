@@ -70,6 +70,15 @@ main{
 			border-radius: 5px;
 			padding: 0.5em 1em;
 		}
+		.bookPopup{
+			background-color: cadetblue;
+			position: relative;
+			top: 40%;
+			text-align: center;
+			display: none;
+			position: fixed;
+			border: solid 5px black;
+		}
 	}
 	.bookshelf{
 		background-color: bisque;

@@ -78,6 +78,15 @@ main div button {
   border-radius: 5px;
   padding: 0.5em 1em;
 }
+main div .bookPopup {
+  background-color: cadetblue;
+  position: relative;
+  top: 40%;
+  text-align: center;
+  display: none;
+  position: fixed;
+  border: solid 5px black;
+}
 main .bookshelf {
   background-color: bisque;
   display: flex;
