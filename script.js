@@ -20,28 +20,61 @@ function populateBookshelf() {
     shelf.appendChild(book);
 
     const title = document.createElement("p");
-    title.classList.add("title");
+    //title.classList.add("title");
     title.textContent = Book.title;
     book.appendChild(title);
 
     const author = document.createElement("p");
-    author.classList.add("author");
+    //author.classList.add("author");
     author.textContent = Book.author;
     book.appendChild(author);
 
     const pages = document.createElement("p");
-    pages.classList.add("pages");
-    pages.textContent = Book.pages;
+    //pages.classList.add("pages");
+    pages.textContent = Book.pages + " pages";
     book.appendChild(pages);
 
-    const read = document.createElement("p");
-    read.classList.add("read");
-    read.textContent = Book.read;
+    const read = document.createElement("button");
+    //read.classList.add("read");
+    if (Book.read=="true") {
+      read.textContent = "Read";
+    }else{
+      read.textContent = "Not read";
+    }
     book.appendChild(read);
+    read.addEventListener("click",function () {
+      updateRead(book.dataset.index)
+    })
+
+    book.setAttribute("data-index",myLibrary.indexOf(Book));
+
+    const remove = document.createElement("button");
+    remove.innerText = "Remove";
+    book.appendChild(remove);
+    remove.addEventListener("click",function () {
+      deleteBook(book.dataset.index)
+    })   
+
   });
   };
 
-function emptyBookshelf(param) {
+  function deleteBook(bookIndex) {
+    myLibrary.splice(bookIndex,1)
+    emptyBookshelf();
+    populateBookshelf();
+  }
+
+  function updateRead(bookIndex) {
+    if (myLibrary[bookIndex].read == "true") {
+      myLibrary[bookIndex].read = "false"
+    }else{
+      myLibrary[bookIndex].read = "true";
+    }    
+    emptyBookshelf();
+    populateBookshelf();
+  }
+
+function emptyBookshelf() {
   shelf.innerHTML = "";
 }
 
@@ -81,13 +114,11 @@ form.addEventListener("submit", (e) => {
     emptyBookshelf();
     populateBookshelf();
   }
-
-
 });
 
 
-const theHobbit = new Book("the hobbit", "Jrr Tolkien", 265, true, false);
-const theWitcher = new Book("the Witcher", "Andrzej Sapkowski", 222, false, false);
+const theHobbit = new Book("The Hobbit", "JRR Tolkien", 265, "true");
+const theWitcher = new Book("The Witcher", "Andrzej Sapkowski", 222, "false");
 
 addBookToLibrary(theHobbit);
 addBookToLibrary(theWitcher);
