@@ -119,7 +119,15 @@ form.addEventListener("submit", (e) => {
 
 const theHobbit = new Book("The Hobbit", "JRR Tolkien", 265, "true");
 const theWitcher = new Book("The Witcher", "Andrzej Sapkowski", 222, "false");
+const theWitcher1 = new Book("The Witcher1", "Andrzej Sapkowski", 222, "false");
+const theWitcher2 = new Book("The Witcher2", "Andrzej Sapkowski", 222, "false");
+const theWitcher3 = new Book("The Witcher3", "Andrzej Sapkowski", 222, "false");
+const theWitcher4 = new Book("The Witcher4", "Andrzej Sapkowski", 222, "false");
 
 addBookToLibrary(theHobbit);
 addBookToLibrary(theWitcher);
+addBookToLibrary(theWitcher1);
+addBookToLibrary(theWitcher2);
+addBookToLibrary(theWitcher3);
+addBookToLibrary(theWitcher4);
 populateBookshelf();

@@ -3,6 +3,8 @@
    License: none (public domain)
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -49,16 +51,22 @@ table {
 /* RESET OVER */
 
 header{
-    background-color: antiquewhite;
+    background-color: #00509D;
     h1{
         font-size: 44px;
 		margin: 0 auto;
 		width: 50%;
+		color: #FDFDFD;
+		font-family: 'Roboto', sans-serif;
     }
-	padding: 10px;
+	padding: 20px;
 }
 main{
-	background-color: aquamarine;
+	background-color: #A9A9A9;
+	height: 90vh;
+	.addBookButton{
+		margin: 30px;
+	}
 	div{
 		width: 60%;
 		margin: 0 auto;
@@ -69,24 +77,65 @@ main{
 			font-size: 34px;
 			border-radius: 5px;
 			padding: 0.5em 1em;
+			background-color: #00509D;
+			color: #FDFDFD;
 		}
 		.bookPopup{
-			background-color: cadetblue;
+			padding: 20px;
+			background-color:#96ceb4;
 			position: relative;
 			top: 40%;
 			text-align: center;
 			display: none;
 			position: fixed;
-			border: solid 5px black;
+			border: solid 2px #96ceb4;
+			border-radius: 10px;
+			color: #FDFDFD;	
+			font-family: 'Roboto', sans-serif;		
+			width: 15%;
+			h2{
+				font-size: 26px;
+			}
+			form{
+				display: flex;
+				flex-direction: column;
+
+				button{
+					font-size: 20px;
+					padding: 5px;
+					margin: 2px;
+					width: 100px;
+				}
+			}
 		}
 	}
 	.bookshelf{
-		background-color: bisque;
 		display: flex;
-		//flex-wrap: wrap;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		row-gap: 40px;
 		div{
+			background-color: #FDFDFD;
+			width: 300px;
 			display: flex;
 			flex-direction: column;
+			padding: 5px;
+			border: 1px solid #FDFDFD;
+			border-radius: 10px;
+			row-gap: 5px;
+			p{
+				padding: 2px;
+				font-size: 20px;
+				font-family: 'Roboto', sans-serif;
+				text-align: center;
+			}
+			button{
+				font-size: 20px;
+				padding: 5px;
+				margin: 2px;
+				width: 100px;
+				font-family: 'Roboto', sans-serif;
+			}
 		}
 	}
 }

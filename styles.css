@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -54,17 +55,23 @@ table {
 
 /* RESET OVER */
 header {
-  background-color: antiquewhite;
-  padding: 10px;
+  background-color: #00509D;
+  padding: 20px;
 }
 header h1 {
   font-size: 44px;
   margin: 0 auto;
   width: 50%;
+  color: #FDFDFD;
+  font-family: "Roboto", sans-serif;
 }
 
 main {
-  background-color: aquamarine;
+  background-color: #A9A9A9;
+  height: 90vh;
+}
+main .addBookButton {
+  margin: 30px;
 }
 main div {
   width: 60%;
@@ -77,23 +84,64 @@ main div button {
   font-size: 34px;
   border-radius: 5px;
   padding: 0.5em 1em;
+  background-color: #00509D;
+  color: #FDFDFD;
 }
 main div .bookPopup {
-  background-color: cadetblue;
+  padding: 20px;
+  background-color: #96ceb4;
   position: relative;
   top: 40%;
   text-align: center;
   display: none;
   position: fixed;
-  border: solid 5px black;
+  border: solid 2px #96ceb4;
+  border-radius: 10px;
+  color: #FDFDFD;
+  font-family: "Roboto", sans-serif;
+  width: 15%;
 }
-main .bookshelf {
-  background-color: bisque;
-  display: flex;
+main div .bookPopup h2 {
+  font-size: 26px;
 }
-main .bookshelf div {
+main div .bookPopup form {
   display: flex;
   flex-direction: column;
+}
+main div .bookPopup form button {
+  font-size: 20px;
+  padding: 5px;
+  margin: 2px;
+  width: 100px;
+}
+main .bookshelf {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  row-gap: 40px;
+}
+main .bookshelf div {
+  background-color: #FDFDFD;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  border: 1px solid #FDFDFD;
+  border-radius: 10px;
+  row-gap: 5px;
+}
+main .bookshelf div p {
+  padding: 2px;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+main .bookshelf div button {
+  font-size: 20px;
+  padding: 5px;
+  margin: 2px;
+  width: 100px;
+  font-family: "Roboto", sans-serif;
 }
 
 /*# sourceMappingURL=styles.css.map */
